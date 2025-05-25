@@ -1,0 +1,197 @@
+ <!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset=" UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=" IE-edge">
+    <meta name="viewport" content=" width-device-width, initial -scale=1.0">
+    <title> My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head> 
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#achievements">achievements</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>My Portfolio</p>
+                <h1>HI! IM <span>ANGELICA</span><br>from BsIt 1F</h1>
+
+            
+
+            </div>
+        </div>
+    </div>
+    <!------------------about------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/imageee.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About me</h1>
+                    <p>HI!! im angelica but you can call me RED im a BSIT student :3 </p>
+
+                    <div class="tab-titles">
+                       <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                       <p class="tab-links"  onclick="opentab('experience')">experience</p>
+                       <p class="tab-links" onclick="opentab('education')">education</p>
+                       
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Coding</span><br>just basics and still learning</li>
+                            <li><span>Sports</span><br> i play volleyball, swimming, and basketball</li>
+                            <li><span>Cooking</span><br>im a good cook trust me</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Work</span><br>i work as a customer service agent before</li>
+                           
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SHS</span><br> my strand is GAS</li>
+                            <li><span>College</span><br> information technology student</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------------service------------------>
+<div id="services">
+ <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+    <div>
+        <h2>web design</h2>
+        <p> basics</p>
+        <a href="#">learn more</a>
+    </div>
+    <div>
+        <h2>app designer</h2>
+        <p> soon</p>
+        <a href="#">learn more</a>
+    </div>
+    <div>
+        <h2>game developer</h2>
+        <p> soon</p>
+        <a href="#">learn more</a>
+    </div>
+    </div>
+ </div>
+</div>
+<!---------------portfolio---------------->
+<div id="portfolio">
+       <div class="container">
+          <h1 class="sub-title"> My achievements</h1>
+            <div class="work-list">
+                <div class="work">
+                   <img src="images/c sharp.jpg">
+                   <div class="layer">
+                    <h3>Solo Learn certificate</h3>
+                    <p>C#</p>
+                   </div>
+                 </div>
+                 <div class="work">
+                    <img src="images/css.jpg">
+                    <div class="layer">
+                        <h3>Solo Learn certificate</h3>
+                        <p>CSS</p>
+                       </div>
+                  </div>
+                  <div class="work">
+                    <img src="images/html.jpg">
+                    <div class="layer">
+                        <h3>Solo Learn certificate</h3>
+                        <p>HTML</p>
+                       </div>
+                  </div>
+                  <div class="work">
+                    <img src="images/coding foundations.jpg">
+                    <div class="layer">
+                        <h3>Solo Learn certificate</h3>
+                        <p>Coding Foundations</p>
+                       </div>
+                  </div>
+                  <div class="work">
+                    <img src="images/java.jpg">
+                    <div class="layer">
+                        <h3>Solo Learn certificate</h3>
+                        <p>Java</p>
+                       </div>
+                    </div>
+                    <div class="work">
+                      <img src="images/javascript.jpg">
+                      <div class="layer">
+                          <h3>Solo Learn certificate</h3>
+                          <p>yes</p>
+                          
+                         </div>   
+                  </div>
+        </div>
+             </div>
+</div>
+
+
+
+<!----------------conatact---------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact</h1>
+                <p>montelprecious@gmail.com</p>
+                <p>0123456790</p>
+            </div>
+            <div class="contact-right"></div>
+            <form>
+                <input type="text"    name="Name"    placeholder="your name"  required>
+                <input type="email"     name="email"    placeholder="your email" required>
+                <textarea name="message" row="6" placeholder="your message"></textarea>
+                <button type="submit" class="btn btn2">submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright © Angelica pew pew</p>
+    </div>
+   
+</div>
+
+
+
+
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+
+     for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+     }
+     for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+     }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab"); 
+}
+</script>
+
+</body>
+ </html> 
